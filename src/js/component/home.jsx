@@ -1,24 +1,32 @@
 import React from "react";
-import Redlight from "./redlight";
-import Yellowlight from "./yellowlight";
-import Greenlight from "./greenlight";
 
+//include images into your bundle
 
 //create your first component
-const Home = () => {
+const Home = (value) => {
 	return (
-
-	      <div className="container-fluid text-center">
-      <div className="row justify-content-center">
-        <div className="col-1 bg-dark m-5 p-2 rounded">
-		<Redlight/>
-		<Yellowlight/>
-		<Greenlight/>
-		</div>
-		</div>
-		</div>
-
+<div className="row text-danger d-flex justify-content-center mt-5 ">
+<div className="col-1 p-0">
+<h1><span class="badge bg-secondary">{value.digitSix % 10}</span></h1>
+</div>
+<div className="col-1 p-0 ">
+<h1><span class="badge bg-secondary">{value.digitFive % 10}</span></h1>
+</div>
+<div className="col-1 p-0">
+<h1><span class="badge bg-secondary">{value.digitFour % 10}</span></h1>
+</div>
+<div className="col-1 p-0">
+<h1><span class="badge bg-secondary">{value.digitThree % 10}</span></h1>
+</div>
+<div className="col-1 p-0">
+<h1><span class="badge bg-secondary">{value.digitTwo % 10}</span></h1>
+</div>
+<div className="col-1 p-0">
+<h1><span class="badge bg-secondary">{value.digitOne % 10}</span></h1>
+</div>
+</div>
 	);
-}
-  
+};
+
 export default Home;
+
